@@ -1717,8 +1717,8 @@ msg.channel.send(embed).then(() => {
 
 
 client.on('ready', function(){	
-    var ms = 40000 ;	
-    var setGame = ['-inv','-help'];	
+    var ms = 3000 ;	
+    var setGame = ['4S The best','-help'];	
     var i = -1;	
     var j = 0;	
     setInterval(function (){	
@@ -2338,40 +2338,7 @@ message.channel.sendEmbed(Embed).then(msg => {
                                 });
 
 
-client.on('message' , message => {
-var prefix = "-"
 
-if (message.author.bot) return;
-if (message.content.startsWith(prefix + "contact")) {
-if (!message.channel.guild) return;
-
-
-
-let args = message.content.split(" ").slice(1).join(" ");
-
-
-
-client.users.get("396958215377780747").send(
-    "\n" + "**" + "● السيرفر :" + "**" +
-    "\n" + "**" + "» " + message.guild.name + "**" +
-    "\n" + "**" + " ● المرسل : " + "**" +
-    "\n" + "**" + "» " + message.author.tag + "**" +
-    "\n" + "**" + " ● الرسالة : " + "**" +
-    "\n" + "**" + args + "**")
-
-let embed = new Discord.RichEmbed()
-     .setAuthor(message.author.username, message.author.avatarURL)
-     .setDescription(':mailbox_with_mail: تم ارسال الرسالة الى صاحب البوت بنجاح')
-     .setThumbnail(message.author.avatarURL)
-     .setFooter("By : LEGEND_YT#4537 ")
-                                                
-
-message.channel.send(embed);
-
-
-}
-    
-});
 
 client.on('message', message => {
 	var prefix = "-"
@@ -2499,28 +2466,7 @@ client.on("guildMemberAdd", member => {
 }).catch(console.error)
 })
 
-client.on('message', message => {
-        if (message.content === "-inv") {
-            if(!message.channel.guild) return;
-        let embed = new Discord.RichEmbed()
-        .setAuthor(` ${message.author.username} `, message.author.avatarURL)      
-        .setTitle(`:small_orange_diamond: اضغط هنا `)
-        .setURL(`https://discordapp.com/api/oauth2/authorize?client_id=466256531998900246&permissions=8&scope=bot`)
-        .setThumbnail(" https://cdn.discordapp.com/avatars/377904849783750667/6c76e412f18c142dfd711d05fb363869.png?size=2048")        
-     message.channel.sendEmbed(embed);
-       }
-   });
- 
 
-client.on('message', message => {
-    if(message.content.includes('discord.gg')){
-                                            if(!message.channel.guild) return message.reply('** advertising me on DM ? :thinking:   **');
-        if (!message.member.hasPermissions(['ADMINISTRATOR'])){
-        message.delete()
-    return message.reply(`** Not allowed to advertising Here :angry: ! **`)
-    }
-}
-});
  
 client.on('message', message => {
     if (message.content.startsWith("-avatar")) {
@@ -2836,17 +2782,7 @@ message.channel.stopTyping()
       
       
      
-   client.on('message', message => {
-     if (message.content === "-support") {
-     let embed = new Discord.RichEmbed()
-  .setAuthor(message.author.username)
-  .setColor("#9B59B6")
-  .addField(" ** :gear: Server Support :gear: **" , "  **https://discord.gg/TZ3dcyC**")
-     
-     
-  message.channel.sendEmbed(embed);
-    }
-});
+   
 client.on('message', omar => {
 var prefix = "-";
 if(omar.content.split(' ')[0] == prefix + 'dc') {  // delete all channels
